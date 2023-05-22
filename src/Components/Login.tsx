@@ -11,12 +11,12 @@ const Login = () => {
     Username:"",
     Password:""
   })
-  const handleinput=(e)=>{
+  const handleinput=(e: React.ChangeEvent<HTMLInputElement>)=>{
     const name=e.target.name;
     const value=e.target.value;
     setData({...data,[name]:value})
   }
-  const handlesubmit=(e)=>{
+  const handlesubmit=(e:any)=>{
     e.preventDefault();
     if(data.Username=="foo"&&data.Password=="bar"){
       console.log("You are in");
@@ -26,7 +26,7 @@ const Login = () => {
   }
   console.log(data);
   return (
-    <form className={Style.LoginBox} onSubmit={handlesubmit}>
+    <form className={Style.LoginBox}>
       <h1>Login</h1>
       <h3>Username</h3>
       <input type="text" name='Username' onChange={handleinput} placeholder='Username' value={data.Username}/>

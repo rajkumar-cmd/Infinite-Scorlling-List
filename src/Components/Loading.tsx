@@ -1,4 +1,3 @@
-import React from "react";
 import { SkeletonCircle } from "@chakra-ui/react";
 import style from "./Style/Loading.module.css"
 

@@ -10,7 +10,7 @@ export const AuthContext = React.createContext<AuthContextType>({
   log: () => {},
 });
 
-const AuthContextProvided = ({children}) => {
+const AuthContextProvided = ({children}: { children: React.ReactNode }) => {
   const [seelogin,setSeelogin]=React.useState<boolean>(false);
   const log=()=>{
     setSeelogin(!seelogin);
